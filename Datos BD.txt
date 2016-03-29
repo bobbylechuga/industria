@@ -1,0 +1,7 @@
+
+Directorio local: localhost/industria
+
+BD de wordpress en phpMyAdmin: industria
+
+usuario de Wordpress: usuarioMain
+Contraseña: industrial
