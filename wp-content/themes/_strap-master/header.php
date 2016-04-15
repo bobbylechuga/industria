@@ -16,38 +16,70 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<link rel="shortcut icon" href="<?php bloginfo( 'template_directory' ); ?>/images/favicon.ico">
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 
+<!CHJ-->
+<script src="<?php echo get_template_directory_uri(); ?>/js/analytics.js"  type="text/javascript"></script>
+    
+<title>
+	<?php wp_title('|',true,'right');
+	      bloginfo('name');?></title>
 <?php wp_head(); ?>
+<style>
+  .banner {
+    background:url(<?php 
+      if(is_home() || is_front_page() || !has_post_thumbnail()) { ?>
+        ../images/4.jpg) <?php } else {  
+        $urlFeaturred = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'thumbnail') ); 
+        echo $urlFeaturred; 
+         } ?>) no-repeat 0px 0px;
+         background-size:cover;
+-webkit-background-size: cover;
+-o-background-size: cover;
+-ms-background-size: cover;
+-moz-background-size: cover;
+min-height: 780px;
+position:relative;
+  }
+</style>
 </head>
 
 <body>
 <!-- top header -->
-<div class="banner">
+<div class="banner <?php 
+      if(!is_front_page() ) { ?>
+        page-head<?php } ?>" >
 	<div class="container">
 		<div class="top-header">
 				<div class="top-left">
 					<ul>
-						<li><a href="#">POPULAR</a></li>
-						<li><a href="machinery.html">MACHINERY</a></li>
-						<li><a href="contact.html">CONTACT</a></li>
+						
+						<?php
+						  $argumentos = array(
+						    'menu' => 'header-menu',
+						    'menu_class' => 'nav navbar-nav',
+						    'container' => 'li'
+						      
+						  );
+						  wp_nav_menu($arguments);
+						?>
+						
+						
 					</ul>
 				</div>
 				<div class="top-right">
 					<ul>
-						<li><a class="fb" href="#"></a></li>
-						<li><a class="twi" href="#"></a></li>
-						<li><a class="pin" href="#"></a></li>
-						<li><a class="goog" href="#"></a></li>
+						<a class="scroll intranet" href="#">Intranet</a>
 					</ul>
 				</div>
 				<div class="clearfix"></div>
 				<div class="top-logo">
-					<a href="index.html"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>HEAVY <span>INDUSTRY</span>
-					<i>A Small Scale Project</i>
+					<a href="<?php bloginfo('url');?>"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span><span><?php bloginfo('name');?></span>
+					<i><?php bloginfo('description');?></i>
 					
 					</a>
 				</div>
@@ -55,7 +87,7 @@
 		<div class="top-nav">
 					<div class="nav-icon">
 							<a href="#" class="right_bt" id="activator"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span> </a>
-							<a class="scroll top-indus" href="#top-industries">TOP INDUSTRIES</a>
+							<a class="scroll top-indus" href="#top-industries">Principales Servicios</a>
 							<div class="clearfix"></div>
 					</div>
 					<div class="box" id="box">
@@ -64,11 +96,18 @@
 								<div class="form_content">
 									<div class="menu_box_list">
 										<ul>
-											<li><a class="active" href="index.html"><span>home</span></a></li>
-											<li><a href="about.html"><span>about</span></a></li>
-											<li><a href="typography.html"><span>services</span></a></li>
-											<li><a href="machinery.html"><span>machinery</span></a></li>										
-											<li><a href="contact.html"><span>Contact</span></a></li>
+											
+											<?php
+						            $argumentos = array(
+						              'menu' => 'header-menu',
+						              'menu_class' => 'nav navbar-nav',
+						              'container' => 'li'
+						                
+						            );
+						            wp_nav_menu($arguments);
+						          ?>
+						          
+											
 										
 										</ul>
 									</div>
@@ -125,26 +164,32 @@
 										});
 								</script>
 			<!-- responsiveslides -->
+			
+			<?php 
+      if(is_front_page() ) { ?>
+        
+			
 			<div  id="top" class="callbacks_container">
 				<ul class="rslides" id="slider3">
 					<li>
 						<div class="banner-text">
-							<h3>EXPERIENCE & CRAFTSMANSHIP</h3>
-							<p>POWERED BY PEOPLE</p>
-							<a href="#" class="hvr-rectangle-out button">SEE MORE</a>
-							<a href="#" class="hvr-rectangle-in button red">DOWNLOAD</a>
+							<h3>UN GRUPO DE LIDERAZGO MUNDIAL</h3>
+							<p>CON PRESENCIA EN CHILE</p>
+							<a href="#" class="hvr-rectangle-out button">SEGUIR LEYENDO</a>
+							<!--<a href="#" class="hvr-rectangle-in button red">DOWNLOAD</a>-->
 						</div>
 					</li>
 					<li>
 						<div class="banner-text">
-							<h3>OUR GOAL IS CONTINUOUSLY</h3>
-							<p>SATISFY OUR CLIENTS</p>
-							<a href="#" class="hvr-rectangle-out button">SEE MORE</a>
-							<a href="#" class="hvr-rectangle-in button red">DOWNLOAD</a>
+							<h3>LA SEGURIDAD DE NUESTROS TRABAJADORES</h3>
+							<p>ES NUESTRO FUNDAMENTO</p>
+							<a href="#" class="hvr-rectangle-out button">SEGUIR LEYENDO</a>
+							<!--<a href="#" class="hvr-rectangle-in button red">DOWNLOAD</a>-->
 						</div>
 					</li>
 				</ul>
 			</div>
+			<?php } ?>
 		</div>
 	</div>
 </div>

@@ -45,6 +45,8 @@ function _s_setup() {
 		'primary' => esc_html__( 'Primary Menu', '_s' ),
 	) );
 
+   
+
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
@@ -134,9 +136,9 @@ function _s_scripts() {
     wp_enqueue_script( 'responsiveslides', get_template_directory_uri() . '/js/responsiveslides.min.js', array( 'jquery' ), 'v3.3.5', true );
     wp_enqueue_script( 'swipebox', get_template_directory_uri() . '/js/jquery.swipebox.min.js', array( 'jquery' ), 'v3.3.5', true );
     
-    
 }
 add_action( 'wp_enqueue_scripts', '_s_scripts' );
+
 
 function load_fonts() {
         wp_register_style('et-googleFonts', 'http://fonts.googleapis.com/css?family=Righteous');
@@ -175,3 +177,73 @@ require get_template_directory() . '/inc/jetpack.php';
 */
 require get_template_directory() . '/inc/functions-strap.php';
 
+/*CHJ: Eliminar barra de menú de Wordpress  */
+
+add_filter('show_admin_bar',__RETURN_FALSE);
+
+/*CHJ: agregar soporte para menúes personalizados:
+   */
+   
+add_theme_support('menu');
+
+function registro_menu_temas() {
+  register_nav_menus(array(
+       'header-menu' => __('Header Menu'),
+       'footer-menu' => __('Footer Menu')    
+    )
+  );	
+}
+
+add_action('init','registro_menu_temas');
+
+/* Código para agregar opciones al backend para Teléfono y Dirección CHJ */
+
+function theme_settings_page()
+{
+    ?>
+	    <div class="wrap">
+	    <h1>Datos de empresa</h1>
+	    <form method="post" action="options.php">
+	        <?php
+	            settings_fields("section");
+	            do_settings_sections("theme-options");      
+	            submit_button(); 
+	        ?>          
+	    </form>
+		</div>
+	<?php
+}
+
+function add_theme_menu_item()
+{
+	add_menu_page("Datos de empresa", "Datos de empresa", "manage_options", "theme-panel", "theme_settings_page", null, 99);
+}
+
+add_action("admin_menu", "add_theme_menu_item");
+
+function muestra_telefono()
+{
+	?>
+    	<input type="text" name="telf" id="telf" value="<?php echo get_option('telf'); ?>" />
+    <?php
+}
+
+function muestra_direccion()
+{
+	?>
+    	<input type="text" name="direccion" id="direccion" value="<?php echo get_option('direccion'); ?>" />
+    <?php
+}	
+
+function display_theme_panel_fields()
+{
+	add_settings_section("section", "All Settings", null, "theme-options");
+	
+	add_settings_field("telf", "Número de Teléfono", "muestra_telefono", "theme-options", "section");
+    add_settings_field("direccion", "Dirección", "muestra_direccion", "theme-options", "section");
+
+    register_setting("section", "telf");
+    register_setting("section", "direccion");
+}
+
+add_action("admin_init", "display_theme_panel_fields");

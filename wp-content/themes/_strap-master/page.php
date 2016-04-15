@@ -14,12 +14,29 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
+	<div class="about two">
+		
+		 
+		
+		<div class="container">
+      	
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
+        <h3 class="tittle"><?php the_title();?></h3>	
+				<div class="about-top">
+				<!--  <div class="col-md-5 about-top-left">
+				    <?php $urlFeaturred = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'thumbnail') );  ?>
+				    <img src="<?php echo $urlFeaturred; ?>" class="img-responsive" alt=""/>
+				  </div> -->
+				  <div class="col-md-12 about-top-right">
+				    <p><?php the_content(); ?></p>
+			    </div>
+			    <div class="clearfix"></div>
+			  </div>
+
+			<?php endwhile; // End of the loop. ?>
+			  	
+				
 
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template.
@@ -28,10 +45,11 @@ get_header(); ?>
 					endif;
 				?>
 
-			<?php endwhile; // End of the loop. ?>
-
-		</main><!-- #main -->
+			
+      
+      </div>
+		</div><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

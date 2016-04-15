@@ -32,7 +32,8 @@ get_header(); ?>
 	</div>
 </div>
 <!-- //banner-bottom -->
-<!--destination-starts-->
+<!--destination-starts
+
 <div class="destination">
 	<div class="container">
 		<div class="destination-1">
@@ -85,7 +86,8 @@ get_header(); ?>
 		</div>
 	</div>
 </div>
-<!--destination-end-->
+
+destination-end-->
 <!--start-yachts-->
 <div id="top-industries" class="gallery">
 	<div class="container">

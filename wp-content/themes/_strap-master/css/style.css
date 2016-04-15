@@ -10,6 +10,88 @@ body{
 	padding:0;
 	background:#fff;
  }
+ 
+/*CHJ*/
+
+.admin-bar .navbar-fixed-top{
+  margin-top: 30px;	
+}
+
+.current-menu-item > a{
+  color: #CC7200 !important;	
+}
+
+@media (min-width:768px) {
+	.sub-menu {
+		display: none;
+		position: absolute;
+		background: #222;
+		padding: 10px 15px;
+		width: 200px;		
+	}
+
+	li:hover .sub-menu {
+		display: block;
+	}
+
+}
+
+.sub-menu li {
+	margin-bottom: 10px;
+	list-style: none;
+}
+
+.sub-menu li:last-child {
+	margin-bottom: 0;
+}
+
+.sub-menu a  {
+	color: #999;
+	text-decoration: none;
+}
+
+.sub-menu a:hover  {
+	color: #fff;	
+}
+
+a.intranet {
+text-decoration:none;
+    float: right;
+    color: #fff;
+    padding: 0px 0px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+h4.tittle{
+color:#CC7200;
+font-size:20px;
+font-family: 'Righteous', cursive;
+text-align:center;
+margin-bottom:25px;
+}
+
+
+.bottomMenu { display: block; width:960px;}
+.bottomMenu ul { display:inline; float:right;}
+.bottomMenu li { list-style-type: none; display: inline; font-size: 12px; }
+.bottomMenu li a {
+	color:#CC7200;
+	font-size:25px;
+  font-family: 'Righteous', cursive;
+	line-height:15px;
+	text-decoration:none;
+	font-weight:normal;
+	
+	padding: 0 40px 0 3px;
+}
+.bottomMenu li a:hover { color:#ccc; text-decoration:underline;}
+.bottomMenu li:last-child > a {border-right: none;} /* remove pipe from last item */
+
+
+
+/*Hasta aquí*/ 
+ 
 body a{
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
@@ -541,6 +623,7 @@ font-family: 'Righteous', cursive;
 text-align:center;
 margin-bottom:25px;
 }
+
 .strip{
 background:#333333;
 height:2px;
@@ -909,7 +992,7 @@ color:#000;
    padding:8px;
    margin: 9px 0 0 0;
 }
-.view p {
+.view h4 {
    font-style: italic;
    font-size: 13px;
    position: relative;

@@ -15,7 +15,11 @@
 <div class="footer">
 				<div class="container">
 					<div class="div1">
-						<div class="col-md-3 head">
+						<div class="bottomMenu">
+              <?php wp_nav_menu( array( 'theme_location' => 'secondary' ) ); ?>  
+            </div>
+            
+						<!--<div class="col-md-3 head">
 							<h3>get inspired</h3>
 							<ul class="inspired">
 								<li><a href="#">Machinery</a></li>
@@ -52,14 +56,8 @@
 									</form>
 
 							</div>
-								<div class="social">
-									<ul>
-										<li><a href="#" class="face"></a></li>
-										<li><a href="#" class="twit"></a></li>
-										<li><a href="#" class="gplus"></a></li>
-									</ul>
-								</div>
-						</div>
+								
+						</div>-->
 						<div class="clearfix"></div>
 					</div>
 					
@@ -69,7 +67,7 @@
 <!-- copy -->
 <div class="div2">
 	<div class="container">
-		<p>© 2015 Heavy Industry. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+		<p>&copy; <?php bloginfo('name'); echo date(' Y ');  ?></p>
 	</div>
 </div>
 <!-- copy -->
