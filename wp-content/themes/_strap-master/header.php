@@ -42,7 +42,6 @@
 -o-background-size: cover;
 -ms-background-size: cover;
 -moz-background-size: cover;
-min-height: 780px;
 position:relative;
   }
 </style>
@@ -56,38 +55,28 @@ position:relative;
 	<div class="container">
 		<div class="top-header">
 				<div class="top-left">
-					<ul>
-						
-						<?php
-						  $argumentos = array(
-						    'menu' => 'header-menu',
-						    'menu_class' => 'nav navbar-nav',
-						    'container' => 'li'
+					  <?php
+						  $arguments = array(
+						    'theme_location' => 'header-menu'
 						      
 						  );
 						  wp_nav_menu($arguments);
 						?>
-						
-						
-					</ul>
 				</div>
 				<div class="top-right">
-					<ul>
-						<a class="scroll intranet" href="#">Intranet</a>
-					</ul>
+				  <a class="scroll intranet" href="#">Intranet</a>
 				</div>
 				<div class="clearfix"></div>
 				<div class="top-logo">
 					<a href="<?php bloginfo('url');?>"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span><span><?php bloginfo('name');?></span>
 					<i><?php bloginfo('description');?></i>
-					
 					</a>
 				</div>
 		</div>
 		<div class="top-nav">
 					<div class="nav-icon">
 							<a href="#" class="right_bt" id="activator"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span> </a>
-							<a class="scroll top-indus" href="#top-industries">Principales Servicios</a>
+							<a class="scroll top-indus" href="#top-industries">Servicios</a>
 							<div class="clearfix"></div>
 					</div>
 					<div class="box" id="box">
@@ -95,21 +84,14 @@ position:relative;
 							<div class="box_content_center">
 								<div class="form_content">
 									<div class="menu_box_list">
-										<ul>
-											
 											<?php
-						            $argumentos = array(
-						              'menu' => 'header-menu',
-						              'menu_class' => 'nav navbar-nav',
-						              'container' => 'li'
+						            $arguments = array(
+						              'theme_location' => 'header-menu'
+						              
 						                
 						            );
 						            wp_nav_menu($arguments);
 						          ?>
-						          
-											
-										
-										</ul>
 									</div>
 									<a class="boxclose" id="boxclose"> <span> </span></a>
 								</div>                                  
@@ -181,7 +163,7 @@ position:relative;
 					</li>
 					<li>
 						<div class="banner-text">
-							<h3>LA SEGURIDAD DE NUESTROS TRABAJADORES</h3>
+							<h3>LA SEGURIDAD DEL TRABAJADOR</h3>
 							<p>ES NUESTRO FUNDAMENTO</p>
 							<a href="#" class="hvr-rectangle-out button">SEGUIR LEYENDO</a>
 							<!--<a href="#" class="hvr-rectangle-in button red">DOWNLOAD</a>-->

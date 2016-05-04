@@ -40,10 +40,7 @@ function _s_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Menu', '_s' ),
-	) );
+	
 
    
 
@@ -181,14 +178,15 @@ require get_template_directory() . '/inc/functions-strap.php';
 
 add_filter('show_admin_bar',__RETURN_FALSE);
 
-/*CHJ: agregar soporte para menúes personalizados:
+/*CHJ: funcion para agregar soporte para menúes personalizados en el tema:
    */
    
-add_theme_support('menu');
+
 
 function registro_menu_temas() {
   register_nav_menus(array(
-       'header-menu' => __('Header Menu')    
+       'header-menu' => __('Header Menu'),
+       'footer-menu' => __('Footer Menu')    
     )
   );	
 }

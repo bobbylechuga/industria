@@ -16,7 +16,20 @@
 				<div class="container">
 					<div class="div1">
 						<div class="bottomMenu">
-              <?php wp_nav_menu( array( 'theme_location' => 'secondary' ) ); ?>  
+							
+              <!--<?php wp_nav_menu( array( 'theme_location' => 'secondary' ) ); ?>  -->
+              <?php
+						  $arguments = array(
+						    'theme_location' => 'footer-menu',
+						    'depth' => 0,
+						    'container' => '',
+						    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
+						    
+						      
+						  );
+						  wp_nav_menu($arguments);
+						?>
+              
             </div>
             
 						<!--<div class="col-md-3 head">

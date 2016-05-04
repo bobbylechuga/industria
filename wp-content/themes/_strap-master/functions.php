@@ -40,10 +40,7 @@ function _s_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Menu', '_s' ),
-	) );
+	
 
    
 
@@ -118,7 +115,7 @@ function _s_scripts() {
 	
 	wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.css');
 	wp_enqueue_style('chocolat', get_template_directory_uri() . '/css/chocolat.css');
-	wp_enqueue_style('style', get_template_directory_uri() . '/css/style.css');
+	wp_enqueue_style('style', get_template_directory_uri() . '/style.css');
 	wp_enqueue_style('swipebox', get_template_directory_uri() . '/css/swipebox.css');
 	
 
@@ -181,10 +178,10 @@ require get_template_directory() . '/inc/functions-strap.php';
 
 add_filter('show_admin_bar',__RETURN_FALSE);
 
-/*CHJ: agregar soporte para menúes personalizados:
+/*CHJ: funcion para agregar soporte para menúes personalizados en el tema:
    */
    
-add_theme_support('menu');
+
 
 function registro_menu_temas() {
   register_nav_menus(array(
