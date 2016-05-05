@@ -1,0 +1,46 @@
+.top-logo a {
+  background: #666; }
+
+.right_bt span:hover, a.top-indus:hover {
+  color: #EF0B0B;
+  border: 1px solid #EF0B0B; }
+
+.top-left ul li a:hover, a.intranet:hover {
+  color: #EF0B0B; }
+
+.current-menu-item > a {
+  color: #EF0B0B !important; }
+
+.banner-text h3 {
+  color: #EF0B0B; }
+
+a.hvr-rectangle-out {
+  background: #EF0B0B; }
+
+.box_content_center {
+  background: #07006D; }
+
+/* PAGE */
+h3.tittle {
+  color: #07006D; }
+
+.services-bottom h3.tittle {
+  color: #fff; }
+
+.view-ninth .mask-1, .view-ninth .mask-2 {
+  background: #EF0B0B; }
+
+.services-bottom-grd-right h4 {
+  color: #EF0B0B; }
+
+/* FOOTER */
+.footer {
+  background: #666; }
+
+.bottomMenu ul li a {
+  color: #EF0B0B; }
+
+.colophon {
+  background: #EF0B0B; }
+
+/*# sourceMappingURL=mediamoka.css.map */

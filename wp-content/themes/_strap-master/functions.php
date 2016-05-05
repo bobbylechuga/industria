@@ -117,6 +117,7 @@ function _s_scripts() {
 	wp_enqueue_style('chocolat', get_template_directory_uri() . '/css/chocolat.css');
 	wp_enqueue_style('style', get_template_directory_uri() . '/style.css');
 	wp_enqueue_style('swipebox', get_template_directory_uri() . '/css/swipebox.css');
+	wp_enqueue_style('mediamoka', get_template_directory_uri() . '/css/mediamoka.css');
 	
 
 	wp_enqueue_script( '_s-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );

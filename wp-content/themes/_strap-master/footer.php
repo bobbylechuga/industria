@@ -78,7 +78,7 @@
 </div>
 <!-- footer -->
 <!-- copy -->
-<div class="div2">
+<div class="colophon div2">
 	<div class="container">
 		<p>&copy; <?php bloginfo('name'); echo date(' Y ');  ?></p>
 	</div>

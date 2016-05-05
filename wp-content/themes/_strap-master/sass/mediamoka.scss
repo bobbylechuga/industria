@@ -1,0 +1,56 @@
+@import "variables.scss";
+
+.top-logo a { 
+	background: $base_logo;
+}
+
+.right_bt span:hover, a.top-indus:hover {
+    color: $logo_secundario;
+    border: 1px solid $logo_secundario;
+}
+.top-left ul li a:hover, a.intranet:hover {
+	color: $logo_secundario;
+}
+.current-menu-item > a { 
+	color: $logo_secundario !important;
+}
+.banner-text h3 {
+	color: $logo_secundario;
+}
+
+a.hvr-rectangle-out {
+	background: $logo_secundario;
+}
+
+.box_content_center {
+    background: $logo_primario;
+}
+
+/* PAGE */
+
+h3.tittle {
+	color: $logo_primario;
+}
+
+.services-bottom h3.tittle {
+	color: #fff;
+}
+
+.view-ninth .mask-1, .view-ninth .mask-2 {
+	background: $logo_secundario;
+}
+.services-bottom-grd-right h4 {
+	color: $logo_secundario;
+}
+/* FOOTER */
+
+.footer { 
+	background: $base_logo;
+}
+
+.bottomMenu ul li a {
+	color: $logo_secundario;
+}
+.colophon {
+	background: $logo_secundario;
+}
