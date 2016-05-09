@@ -30,6 +30,12 @@ h1, h2, h3, h4, h3.tittle {
 a.hvr-rectangle-out {
   background: #e31818; }
 
+a.hvr-rectangle-out, a.hvr-rectangle-out:hover {
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 0px solid #000000; }
+
 .box_content_center {
   background: #004489; }
 

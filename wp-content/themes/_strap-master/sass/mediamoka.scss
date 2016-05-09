@@ -33,6 +33,13 @@ a.hvr-rectangle-out {
 	background: $logo_secundario;
 }
 
+a.hvr-rectangle-out, a.hvr-rectangle-out:hover {
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border: 0px solid #000000;
+}
+
 .box_content_center {
     background: $logo_primario;
 }
