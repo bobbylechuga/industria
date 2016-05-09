@@ -1,46 +1,59 @@
+@font-face {
+  font-family: "Soletanche";
+  src: url("../fonts/Soletanche.ttf") format("truetype"); }
+@font-face {
+  font-family: "Soletanche-bolf";
+  font-weight: bold;
+  src: url("../fonts/Soletanche.-bold.otf"); }
+h1, h2, h3, h4, h3.tittle {
+  font-family: Soletanche; }
+
 .top-logo a {
-  background: #666; }
+  background: #fff; }
+.top-logo i {
+  color: #666 !important; }
 
 .right_bt span:hover, a.top-indus:hover {
-  color: #EF0B0B;
-  border: 1px solid #EF0B0B; }
+  color: #e31818;
+  border: 1px solid #e31818; }
 
 .top-left ul li a:hover, a.intranet:hover {
-  color: #EF0B0B; }
+  color: #e31818; }
 
 .current-menu-item > a {
-  color: #EF0B0B !important; }
+  color: #e31818 !important; }
 
 .banner-text h3 {
-  color: #EF0B0B; }
+  color: #e31818;
+  font-family: Soletanche; }
 
 a.hvr-rectangle-out {
-  background: #EF0B0B; }
+  background: #e31818; }
 
 .box_content_center {
-  background: #07006D; }
+  background: #004489; }
 
 /* PAGE */
 h3.tittle {
-  color: #07006D; }
+  color: #004489; }
 
 .services-bottom h3.tittle {
   color: #fff; }
 
 .view-ninth .mask-1, .view-ninth .mask-2 {
-  background: #EF0B0B; }
+  background: #e31818; }
 
 .services-bottom-grd-right h4 {
-  color: #EF0B0B; }
+  color: #e31818; }
 
 /* FOOTER */
 .footer {
   background: #666; }
 
 .bottomMenu ul li a {
-  color: #EF0B0B; }
+  color: #e31818; }
 
 .colophon {
-  background: #EF0B0B; }
+  background: #e31818; }
 
 /*# sourceMappingURL=mediamoka.css.map */

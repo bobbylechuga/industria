@@ -1,7 +1,17 @@
 @import "variables.scss";
+@font-face { font-family: "Soletanche";  src: url('../fonts/Soletanche.ttf') format("truetype"); }
+@font-face { font-family: "Soletanche-bolf"; font-weight: bold; src: url('../fonts/Soletanche.-bold.otf');}
 
-.top-logo a { 
-	background: $base_logo;
+h1, h2, h3, h4, h3.tittle  {
+	font-family: Soletanche;
+}
+.top-logo { 
+	a { 
+		background: #fff;
+	}
+	i {
+		color: $base_logo !important;
+	}
 }
 
 .right_bt span:hover, a.top-indus:hover {
@@ -16,6 +26,7 @@
 }
 .banner-text h3 {
 	color: $logo_secundario;
+	font-family: Soletanche;
 }
 
 a.hvr-rectangle-out {

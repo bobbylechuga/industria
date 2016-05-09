@@ -31,12 +31,11 @@
 <?php wp_head(); ?>
 <style>
   .banner {
-    background:url(<?php 
-      if(is_home() || is_front_page() || !has_post_thumbnail()) { ?>
+    background:url('<?php if(is_home() || is_front_page() || !has_post_thumbnail()) { ?> 
         ../images/4.jpg) <?php } else {  
         $urlFeaturred = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'thumbnail') ); 
         echo $urlFeaturred; 
-         } ?>) no-repeat 0px 0px;
+         } ?>') no-repeat 0px 0px;
          background-size:cover;
 -webkit-background-size: cover;
 -o-background-size: cover;
@@ -68,7 +67,7 @@ position:relative;
 				</div>
 				<div class="clearfix"></div>
 				<div class="top-logo">
-					<a href="<?php bloginfo('url');?>"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span><span><?php bloginfo('name');?></span>
+					<a href="<?php bloginfo('url');?>"><span><img src="<?php echo get_template_directory_uri()."/images/logo-soletanche.png"; ?>" alt="<?php bloginfo('name');?>"></span>
 					<i><?php bloginfo('description');?></i>
 					</a>
 				</div>
